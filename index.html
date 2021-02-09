@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Envie mensagem pelo Whatsapp</title>
+</head>
+<body>
+<style>
+  .input {
+    border-radius: 8px;
+  }
+</style>
+
+
+<label for="cell">Celular</label>
+<input id="cell" type="text" class="input" />
+<br />
+<label for="message">Texto</label>
+<textarea id="message" class="input"></textarea>
+<br/>
+<button id="clickButton" onclick="handleClick">Enviar</button>
+<hr>
+
+<script>
+
+var phone = document.getElementById("cell")
+var message = document.getElementById("message")
+var button = document.getElementById("clickButton")
+button.onclick = () => window.open("https://api.whatsapp.com/send?phone=+55"+phone.value+"&text="+message.value);
+
+
+</script>
+
+</body>
+</html>
